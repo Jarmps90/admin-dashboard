@@ -52,6 +52,7 @@ h2, h3{
     background-color: var(--bg-header-tabs);
 }
 
+
 .admin-btns{
     grid-column: 2/3;
     grid-row: 2/3;
@@ -60,12 +61,12 @@ h2, h3{
     padding: 20px;
 }
 
+
 .user-text{
     grid-column: 1/2;
     padding-left: 20px;
     display: grid;
     grid-template-columns: min-content 1fr;
-    
 } 
 
 .user-text > img{
@@ -81,6 +82,21 @@ h2, h3{
 .user-text > div > p, h1{
    margin: 0;
 }
+
+
+.user{
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap:20px;
+    align-items: center;
+    justify-items: center ;
+}
+
+.user > img[src*='bell']:hover{
+    content: url('/resources/Images/Icons/Vector.svg');
+    
+}
+
 .main{
     display: grid;
     padding: 10px 20px 50px;
@@ -90,10 +106,8 @@ h2, h3{
     background-color: var(--bg-main);
     grid-template-columns: 3fr 1fr;
     grid-template-rows:  minmax(50px, 60px) 3fr minmax(50px, 60px) 3fr;
-   
-   
-    
 }
+
 .project-heading{
     grid-column: 1/2;
 } 
