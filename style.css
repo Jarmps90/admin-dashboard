@@ -8,6 +8,9 @@
     --fs-main: 1rem;
     --fs-small: .75rem;
     --fs-medium: .875rem;
+    --left-side-padding: 1.25rem;
+    --margin-100: 0.625rem;
+    --padding-200:1.25rem;
 }
 
 html,
@@ -43,7 +46,7 @@ ul{
 
 p,
 h2, h3{
-    margin: 10px;
+    margin: var(--margin-100);
 }
 
 .header{
@@ -51,6 +54,7 @@ h2, h3{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
     background-color: var(--bg-header-tabs);
+    
 }
 
 
@@ -59,15 +63,16 @@ h2, h3{
     grid-row: 2/3;
     align-self: end;
     justify-self: end;
-    padding: 20px;
+    padding: var(--padding-200);
 }
 
 
 .user-text{
     grid-column: 1/2;
-    padding-left: 20px;
+    padding-left: var(--left-side-padding);
     display: grid;
     grid-template-columns: min-content 1fr;
+    align-items: center;
 } 
 
 .user-text > img{
@@ -77,7 +82,7 @@ h2, h3{
 
 .user-text > div{
     grid-column: 2/3;
-    padding: 20px;
+    padding:  var(--padding-200);
 }
 
 .user-text > div > p, h1{
@@ -103,8 +108,11 @@ h2, h3{
 }
 
 .search-bar{
-    justify-self: center;
-    align-self: center;
+    padding-left: var(--left-side-padding);
+    align-items: center;
+    display:grid;
+    grid-template-columns: min-content 2fr;
+    gap: 10px;
     
 }
 
@@ -112,8 +120,8 @@ h2, h3{
     border-radius: 50px;
     border-style: none;
     background-color: rgb(224, 224, 224);
-    width: 30vh;
-    height: 2.5vh;
+    width: 60vh;
+    height: 3vh;
 }
 
 #search:focus{
@@ -183,7 +191,11 @@ h2, h3{
     border: black solid 1px;
     border-radius: var(--border-radius);
     background-color: var(--bg-header-tabs);
-    
+    display: grid;
+    grid-template-columns: min-content 2fr ;
+    grid-template-rows: repeat(4, minmax(60px, 80px));
+    align-items: center;
+    padding:10px;
 
 }
 
