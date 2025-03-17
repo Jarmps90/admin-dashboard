@@ -20,7 +20,7 @@ body{
     
 }
 
-img{
+img[src$='jpg'] {
     border-radius: 50px;
 }
 
@@ -35,7 +35,14 @@ img{
     grid-row: 1/3;
     gap:20px;
     background-color: var(--bg-nav);
+    align-content: center;
+
     
+}
+
+a > img{
+    padding:5px;
+    align-items: end;
 }
 
 ul{
