@@ -11,7 +11,9 @@
     --fs-medium: .875rem;
     --left-side-padding: 1.25rem;
     --margin-100: 0.625rem;
+    --padding-100: .625rem;
     --padding-200:1.25rem;
+    
 }
 
 html,
@@ -24,6 +26,43 @@ body{
 img[src$='jpg'] {
     border-radius: 50px;
 }
+
+
+.container{
+    height: 100%; 
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.nav{
+    grid-row: 1/3;
+    gap:20px;
+    background-color: var(--bg-nav);
+    align-content: center;
+    display:grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.logo > svg{
+    width: 3.125rem;
+    justify-self: end;
+    padding-left: var(--padding-200);
+
+}
+
+.logo > h1{
+    justify-content: start;
+    align-self: center;
+    padding-left: var(--padding-100);
+}
+.logo{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    
+}
+
 
 li{
     list-style: none;
@@ -39,26 +78,10 @@ a{
 
 a:hover{
    background-color: var(--link-bg-clr);
-   border: 1px solid rgb(5, 181, 194);
+   outline: 1px solid rgb(2, 2, 2);
    border-radius: 50px;
-   box-shadow: 1px 1px 3px rgb(233, 222, 222);
-   box-sizing: border-box;
-}
-
-.container{
-    height: 100%; 
-    display:grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
-}
-
-.nav{
-    grid-row: 1/3;
-    gap:20px;
-    background-color: var(--bg-nav);
-    align-content: center;
-
-    
+   box-shadow: 1px 1px 5px rgb(233, 222, 222);
+  
 }
 
 a > img{
@@ -70,6 +93,7 @@ ul{
     display: grid;
     gap: 20px;
     grid-template-rows: auto;
+    padding:var(--padding-200);
    
 
     
