@@ -1,5 +1,6 @@
 :root{
     --shadow-clr100:gray;
+    --link-bg-clr: rgb(25, 208, 214);
     --bg-nav: rgb(25, 176, 214);
     --bg-main: rgb(231, 231, 231);
     --bg-header-tabs: rgb(255, 255, 255);
@@ -22,6 +23,26 @@ body{
 
 img[src$='jpg'] {
     border-radius: 50px;
+}
+
+li{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+a:hover{
+   background-color: var(--link-bg-clr);
+   border: 1px solid rgb(5, 181, 194);
+   border-radius: 50px;
+   box-shadow: 1px 1px 3px rgb(233, 222, 222);
+   box-sizing: border-box;
 }
 
 .container{
@@ -49,6 +70,9 @@ ul{
     display: grid;
     gap: 20px;
     grid-template-rows: auto;
+   
+
+    
 }
 
 p,
