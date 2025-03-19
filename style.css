@@ -16,12 +16,12 @@
     
 }
 
-html,
 body{
-    height: 100%;
-    margin:0;
-    
+    min-height: 100%;
+    background-color: var(--bg-main);
 }
+
+
 
 img[src$='jpg'] {
     border-radius: 50px;
@@ -29,10 +29,11 @@ img[src$='jpg'] {
 
 
 .container{
-    height: 100%; 
+    
     display:grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: repeat(min-content, 1fr) 1fr;
+    gap:10px;
 }
 
 .nav{
@@ -41,7 +42,8 @@ img[src$='jpg'] {
     background-color: var(--bg-nav);
     align-content: center;
     display:grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    border-radius: 30px;
 }
 
 .logo > svg{
@@ -109,7 +111,8 @@ h2, h3{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
     background-color: var(--bg-header-tabs);
-    
+    border-radius: 30px;
+    background-color: var(--bg-nav);
 }
 
 
@@ -194,7 +197,7 @@ h2, h3{
     gap: 20px;
     background-color: var(--bg-main);
     grid-template-columns: 3fr 1fr;
-    grid-template-rows:  minmax(50px, 60px) 3fr minmax(50px, 60px) 3fr;
+    grid-template-rows: min-content 1fr;
 }
 
 .project-heading{
@@ -202,10 +205,10 @@ h2, h3{
 } 
 .projects{
     grid-column: 1/2;
-    grid-row: 2/5;
+    grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, minmax(min-content, 220px));
     gap: 20px;
 }
 
@@ -214,11 +217,9 @@ h2, h3{
     border-radius: 10px;
     border: 1px solid black;
     font-size: var(--fs-main);
+    padding: var(--padding-100);
 }
-.rside-panel{
-    display: grid;
 
-}
 .announcement-heading{
     grid-column: 2/3;
 } 
@@ -228,7 +229,10 @@ h2, h3{
     border: black solid 1px;
     border-radius: var(--border-radius);
     background-color: var(--bg-header-tabs);
-    
+}
+
+.rside > h2{
+    padding: var(--padding-200);
 }
 
 .announcement > div > p{
@@ -248,11 +252,24 @@ h2, h3{
     background-color: var(--bg-header-tabs);
     display: grid;
     grid-template-columns: min-content 2fr ;
-    grid-template-rows: repeat(4, minmax(60px, 80px));
+    grid-template-rows: repeat(4, minmax(min-content, 70px));
     align-items: center;
     padding:10px;
 
 }
+
+.buttons > button{
+   
+    border: none;
+    background-color: var(--bg-header-tabs);
+    cursor: pointer;
+}
+
+.buttons > button > img:hover{
+    width: 32px;
+    height: 32px;
+    
+} 
 
 
 
