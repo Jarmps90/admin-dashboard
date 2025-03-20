@@ -5,7 +5,8 @@
     --bg-main: rgb(231, 231, 231);
     --bg-header-tabs: rgb(255, 255, 255);
     --border-radius: 10px;
-    --border-project: solid 1px black;
+    --border-shadow: 2px 2px 5px gray;
+    --border-left-project:10px rgb(22, 196, 89) solid;
     --fs-main: 1rem;
     --fs-small: .75rem;
     --fs-medium: .875rem;
@@ -33,7 +34,7 @@ img[src$='jpg'] {
     display:grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(min-content, 1fr) 1fr;
-    gap:10px;
+    gap:20px;
 }
 
 .nav{
@@ -44,6 +45,7 @@ img[src$='jpg'] {
     display:grid;
     grid-template-rows: repeat(4, min-content);
     border-radius: 30px;
+    
 }
 
 .logo > svg{
@@ -107,12 +109,14 @@ h2, h3{
 }
 
 .header{
+   
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
     background-color: var(--bg-header-tabs);
     border-radius: 30px;
     background-color: var(--bg-nav);
+    
 }
 
 
@@ -208,16 +212,18 @@ h2, h3{
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, minmax(min-content, 220px));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
+    
 }
 
 .projects > div{
     background-color: var(--bg-header-tabs);
     border-radius: 10px;
-    border: 1px solid black;
     font-size: var(--fs-main);
-    padding: var(--padding-100);
+    padding: var(--padding-200);
+    border-left: var(--border-left-project) ; 
+    box-shadow: var(--border-shadow);
 }
 
 .announcement-heading{
@@ -226,9 +232,10 @@ h2, h3{
 .announcement{
     grid-row: 2/3;
     display: grid;
-    border: black solid 1px;
     border-radius: var(--border-radius);
     background-color: var(--bg-header-tabs);
+    padding: var(--padding-200);
+    box-shadow: var(--border-shadow);
 }
 
 .rside > h2{
@@ -239,22 +246,25 @@ h2, h3{
     font-size: var(--fs-medium);
 }
 
+.h-line{
+    border-bottom: 1px solid gray;
+}
 
 .trending-heading{
     grid-row: 3/4;
    
 }
 
-.trending{
-   
-    border: black solid 1px;
+.trending{ 
+    
     border-radius: var(--border-radius);
     background-color: var(--bg-header-tabs);
     display: grid;
     grid-template-columns: min-content 2fr ;
     grid-template-rows: repeat(4, minmax(min-content, 70px));
     align-items: center;
-    padding:10px;
+    padding:var(--padding-200);
+    box-shadow: var(--border-shadow);
 
 }
 
@@ -263,16 +273,13 @@ h2, h3{
     border: none;
     background-color: var(--bg-header-tabs);
     cursor: pointer;
-}
+ }
 
 .buttons > button > img:hover{
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     
 } 
-
-
-
 
 
 
