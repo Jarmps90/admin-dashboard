@@ -10,6 +10,7 @@
     --fs-main: 1rem;
     --fs-small: .75rem;
     --fs-medium: .875rem;
+    --fs-medium-100: 1.25rem;
     --left-side-padding: 1.25rem;
     --margin-100: 0.625rem;
     --padding-100: .625rem;
@@ -38,6 +39,8 @@ img[src$='jpg'] {
 
 a > svg{
     fill: var(--icon-color);
+    transform: scale(1rem);
+   
 }
 
 
@@ -75,15 +78,20 @@ a > svg{
 
 
 ul{
-    display:grid;
+    display: grid;
+    grid-template-rows: auto;
     padding:var(--padding-200);
     align-content: center;
-    grid-template-rows: min-content;
 }
 
 li{
     list-style: none;
     
+   
+}
+
+ul > p{
+    height: 5em;
 }
 
 a{
@@ -94,6 +102,8 @@ a{
     color: var(--tx-color-200);
     font-weight: 700;
     font-family: var(--ff-100);
+    padding: var(--padding-100);
+    
 }
 
 /* a:hover{
@@ -104,10 +114,6 @@ a{
   
 } */
 
-a > img{
-    padding:5px;
-    
-}
 
 
 p,
