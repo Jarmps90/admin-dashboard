@@ -154,6 +154,7 @@ h2, h3{
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
+    color: var(--tx-color-300);
 } 
 
 .user-text > img{
@@ -178,6 +179,7 @@ h2, h3{
     align-items: center;
     justify-content: end ;
     padding: 1rem;
+    color: var(--tx-color-300);
 }
 
 .user > img[src*='bell']:hover{
