@@ -3,6 +3,7 @@
     --box-shadow: 1px 1px 5px gray, -1px -1px 5px gray;
     --link-bg-clr: rgb(25, 208, 214);
     --bg-nav: rgb(25, 176, 214);
+    --bg-nav-hover: rgb(255, 255, 255);
     --bg-main: rgb(231, 231, 231);
     --bg-header-tabs: rgb(255, 255, 255);
     --border-radius: 10px;
@@ -22,6 +23,7 @@
     --tx-color-200: rgb(214, 214, 214);
     --tx-color-300: rgb(224, 224, 224);
     --nav-text-clr-100: rgb(224, 224, 224);
+    --nav-clr-200: rgb(0, 0, 0);
     --icon-color: rgb(254, 242, 232);
     
 }
@@ -43,6 +45,7 @@ img[src$='jpg'] {
 a > svg{
     fill: var(--icon-color);
     width: 20px;
+    padding-right: var(--padding-200);
 }
 
 
@@ -84,12 +87,15 @@ a > svg{
 ul{
     display: grid;
     grid-template-rows: auto;
-    padding:var(--padding-200);
-    align-content: center;
+    padding: 0;
+    align-content: start;
+    width: 100%;
 }
 
 li{
     list-style: none;
+    padding-left: var(--padding-200);
+
     
    
 }
@@ -99,26 +105,34 @@ ul > p{
 }
 
 a{
+    width: 100%;
     text-decoration: none;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: min-content 2fr;
     align-items: center;
     color: var(--tx-color-200);
     font-weight: 700;
     font-family: var(--ff-100);
-    padding: var(--padding-100);
+    padding: var(--padding-100) var(--padding-100) var(--padding-100) 0;
     
 }
 
-a:hover{
-   background-color: var(--link-bg-clr);
-  
-  
-   /* box-shadow: 1px 1px 5px rgb(233, 222, 222);
-   */
+li:hover a{
+    color: var(--nav-clr-200);
 }
 
+a:hover{
+    color: var(--nav-clr-200);
+  
+}
 
+a:hover,
+li:hover svg{
+    fill: var(--nav-clr-200);
+}
+li:hover{
+    background-color: var(--bg-nav-hover);
+}
 
 p,
 h2, h3{
