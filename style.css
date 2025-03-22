@@ -259,9 +259,9 @@ h2, h3{
     box-shadow: var(--border-shadow);
 }
 
-.rside > h2{
+/* .rside > h2{
     padding: var(--padding-200);
-}
+} */
 
 .announcement > div > p{
     font-size: var(--fs-medium);
@@ -273,7 +273,7 @@ h2, h3{
 
 .trending-heading{
     grid-row: 3/4;
-   
+    padding: var(--padding-200) 0;
 }
 
 .trending{ 
