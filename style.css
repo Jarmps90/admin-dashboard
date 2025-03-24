@@ -1,6 +1,8 @@
 :root{
     --shadow-clr100:gray;
-    --box-shadow: 1px 1px 5px gray, -1px -1px 5px gray;
+    --box-shadow-all-sides: 1px 1px 5px gray, -1px -1px 5px gray;
+    --box-shadow-one-side: 2px 1px 5px gray;
+    --box-shadow-line: inset 1px 1px gray;
     --link-bg-clr: rgb(25, 208, 214);
     --bg-nav: rgb(25, 176, 214);
     --bg-nav-hover: rgb(255, 255, 255);
@@ -31,7 +33,7 @@
 
 body{
     min-height: 100%;
-    background-color: var(--bg-main);
+    background-color:var(--bg-main);
     margin: 0;
     
 }
@@ -59,10 +61,10 @@ a > svg{
 
 .nav{
     grid-row: 1/3;
-   
     gap:10px;
     background-color: var(--bg-nav);
     justify-items: start;
+    box-shadow: var(--box-shadow-one-side);
 }
 
 .logo > svg{
@@ -118,20 +120,21 @@ a{
 }
 
 li:hover a{
-    color: var(--nav-clr-200);
+    color: var(--bg-nav);
 }
 
 a:hover{
-    color: var(--nav-clr-200);
+    color: var(--bg-nav);
   
 }
 
 a:hover,
 li:hover svg{
-    fill: var(--nav-clr-200);
+    fill: var(--bg-nav);
 }
 li:hover{
     background-color: var(--bg-nav-hover);
+    cursor: pointer;
 }
 
 p,
@@ -148,7 +151,7 @@ h2, h3{
     border-radius: 30px;
     background-color: var(--bg-nav);
     margin: var(--margin-100);
-    box-shadow:var(--box-shadow);
+    box-shadow:var(--box-shadow-all-sides);
     
 }
 
@@ -160,7 +163,26 @@ h2, h3{
     justify-self: end;
     padding: var(--padding-200);
 }
+.admin-btns > button{
+    width: 5.5rem;
+    height: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid var(--bg-nav-hover);
+    background-color: var(--bg-nav);
+    color: var(--nav-text-clr-100);
+    font-size: var(--fs-main);
+    font-family: var(--ff-100);
+    font-weight: 700;
+}
 
+.admin-btns > button:hover{
+    background: var(--bg-nav-hover);
+    color:var(--bg-nav);
+    outline: 2px solid var(--bg-nav-hover);
+    border: 1px solid var(--bg-nav);
+}
 
 .user-text{
     grid-column: 1/2;
@@ -217,16 +239,17 @@ h2, h3{
     border-radius: 50px;
     border-style: none;
     background-color: rgb(224, 224, 224);
-    width: 60vh;
+    width: 32vh;
     height: 3vh;
 }
 
 #search:focus{
     outline:none;
     border: 1px solid gray;
-    box-shadow: 2px 1px 5px gray;
-    
+    box-shadow: var(--box-shadow-one-side);
+    width: 60vh;
 }
+
 
 .main{
     display: grid;
@@ -273,9 +296,7 @@ h2, h3{
     box-shadow: var(--border-shadow);
 }
 
-/* .rside > h2{
-    padding: var(--padding-200);
-} */
+
 
 .announcement > div > p{
     font-size: var(--fs-medium);
