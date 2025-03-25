@@ -44,7 +44,7 @@ img[src$='jpg'] {
     border-radius: 50px;
 }
 
-a > svg{
+li > a > svg{
     fill: var(--icon-color);
     width: 20px;
     padding-right: var(--padding-200);
@@ -98,7 +98,7 @@ li{
     list-style: none;
     padding-left: var(--padding-200);
 
-    
+   
    
 }
 
@@ -106,7 +106,7 @@ ul > p{
     height: 5em;
 }
 
-a{
+li > a{
     width: 100%;
     text-decoration: none;
     display: grid;
@@ -187,6 +187,7 @@ h2, h3{
 .user-text{
     grid-column: 1/2;
     padding-left: var(--left-side-padding);
+    padding-bottom: var(--padding-100);
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
@@ -284,6 +285,23 @@ h2, h3{
     box-shadow: var(--border-shadow);
 }
 
+.projects > div > p{
+   padding-bottom:var(--padding-200)
+}
+.link-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30px, 40px));
+    justify-self: end;
+    
+}
+
+.link-buttons > a > img:hover{
+    width: 24px;
+    height: 24px;
+    
+} 
+
+
 .announcement-heading{
     grid-column: 2/3;
 } 
@@ -324,18 +342,6 @@ h2, h3{
 
 }
 
-.buttons > button{
-   
-    border: none;
-    background-color: var(--bg-header-tabs);
-    cursor: pointer;
- }
-
-.buttons > button > img:hover{
-    width: 24px;
-    height: 24px;
-    
-} 
 
 
 
